@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+    <header> 
+        <h1>World Clock</h1>
+    </header>
+
+    <main>
+
+        <div class="clock-card" id="amsterdam-clock">
+            <h2>Amsterdam</h2>
+            <p class="time" id="amsterdam-time">--:--:--</p>
+            <p class="date" id="amsterdam-date">---</p>
+        </div>
+
+        <div class="clock-card" id="colombo-clock">
+            <h2>Colombo</h2>
+            <p class="time" id="colombo-time">--:--:--</p>
+            <p class="date" id="colombo-date">---</p>
+        </div>
+
+        <div class="selector-section">
+            <select id="city-select">
+                <option value="">Select a city...</option>
+                <option value="Europe/Copenhagen">Copenhagen</option>
+                <option value="Pacific/Auckland">Auckland</option>
+                <option value="Asia/Seoul">Seoul</option>
+                <option value="America/Los_Angeles">Seattle</option>
+            </select>
+        </div>
+
+        <div class="clock-card" id="selected-clock" style="display: none;">
+            <h2 id="selected-city-name">--</h2>
+            <p class="time" id="selected-time">--:--:--</p>
+            <p class="date" id="selected-date">---</p>
+            <a href="/" id="home-link">← Back to homepage</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Coded with 🖤 by Daki and open sourced on Github</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
