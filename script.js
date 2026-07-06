@@ -32,7 +32,7 @@ function updateClocks() {
     }).format(now);
 
     if (selectedTimeZone) {
-    document.getElementById("selected-city-name").innerHTML = selectedTimeZone;
+    document.getElementById("selected-city-name").innerHTML = citySelect.options[citySelect.selectedIndex].text;
     document.getElementById("selected-time").innerHTML = new Intl.DateTimeFormat("en-GB", {
         timeZone: selectedTimeZone,
         hour: "2-digit",
@@ -55,7 +55,7 @@ document.getElementById("city-select").addEventListener("change", function() {
     selectedTimeZone = timeZone
     console.log(timeZone);
     document.getElementById("selected-clock").style.display = "block";
-    document.getElementById("selected-city-name").innerHTML = this.value;
+    document.getElementById("selected-city-name").innerHTML = this.options[this.selectedIndex].text;
     document.getElementById("selected-time").innerHTML = new Intl.DateTimeFormat("en-GB", {
         timeZone: selectedTimeZone,
         hour: "2-digit",
